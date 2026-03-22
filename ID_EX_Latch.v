@@ -78,21 +78,31 @@ if (clk) begin
 //latch 
 always @(posedge or clk or posedge rst)begin
     if(rst)begin
- IDEX_Latch_WB <= WB;
- IDEX_Latch_M <= M;
- IDEX_Latch_ALUOp <= ALUOp
+ IDEX_Latch_WB <= 2'b0;
+ IDEX_Latch_M <= 2'b3;
+ IDEX_Latch_ALUOp <= 2'b0;
  IDEX_Latch_ALUSrc
  IDEX_Latch_RegDst
  IDEX_Latch_NPC
- IDEX_Latch_ReadData1<= ReadData1
- IDEX_Latch_ReadData2 <= ReadData2
- IDEX_Latch_SignExtend <= SignExtend
- IDEX_Latch_Instr_2016 <= Instr_2016
- IDEX_Latch_Instr_1511 <= Instr_1511
+ IDEX_Latch_ReadData1<= 2'b32;
+ IDEX_Latch_ReadData2 <= 2'b32;
+ IDEX_Latch_SignExtend <= 2'b32;
+ IDEX_Latch_Instr_2016 <= 2'b5;
+ IDEX_Latch_Instr_1511 <= 2'b5;
     end
 end
 
 if(clk)begin
-    
+     IDEX_Latch_WB <= WB;
+ IDEX_Latch_M <= M;
+ IDEX_Latch_ALUOp <= ALUOp;
+ IDEX_Latch_ALUSrc
+ IDEX_Latch_RegDst
+ IDEX_Latch_NPC
+ IDEX_Latch_ReadData1<= ReadData1;
+ IDEX_Latch_ReadData2 <= ReadData2;
+ IDEX_Latch_SignExtend <= SignExtend;
+ IDEX_Latch_Instr_2016 <= Instr_2016;
+ IDEX_Latch_Instr_1511 <= Instr_1511;
 end
 endmodule
