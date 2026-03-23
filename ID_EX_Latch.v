@@ -69,26 +69,26 @@ output IDEX_Latch_Instr_1511[4:0]
         end
         else begin
 if (clk) begin
-                q <= d;
+              //output  q <= d; //input
             end
         end
     end
 */
 
 //latch 
-always @(posedge or clk or posedge rst)begin
+always @(posedge clk or posedge rst)begin
     if(rst)begin
  IDEX_Latch_WB <= 2'b0;
- IDEX_Latch_M <= 2'b3;
+ IDEX_Latch_M <= 3'b0;
  IDEX_Latch_ALUOp <= 2'b0;
  IDEX_Latch_ALUSrc
  IDEX_Latch_RegDst
  IDEX_Latch_NPC
- IDEX_Latch_ReadData1<= 2'b32;
- IDEX_Latch_ReadData2 <= 2'b32;
- IDEX_Latch_SignExtend <= 2'b32;
- IDEX_Latch_Instr_2016 <= 2'b5;
- IDEX_Latch_Instr_1511 <= 2'b5;
+ IDEX_Latch_ReadData1<= 32'b0;
+ IDEX_Latch_ReadData2 <= 32'b0;
+ IDEX_Latch_SignExtend <= 32'b0;
+ IDEX_Latch_Instr_2016 <= 5'b0;
+ IDEX_Latch_Instr_1511 <= 5'b0
     end
 end
 
