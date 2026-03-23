@@ -1,0 +1,15 @@
+# Assignment: Instruction Decoder
+
+### Students:
+- Alexandra Nuevelle
+- Marie Jardiniano
+
+## Assignment Details
+
+Complete the Instruction Decode (ID) Stage of the MIPS Pipeline. Refer to the Decode Video Lecture
+
+### Submission:
+
+- Github Link with code
+- ReadMe
+- Timing Diagrams Screenshots
