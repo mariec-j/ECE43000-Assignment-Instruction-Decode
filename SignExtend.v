@@ -1,15 +1,10 @@
-/*
-Input:
-+signExtIn[15:0]
-
-Output:
--signExtOut[31:0]
-*/
 `timescale 1ns / 1ps
 
 module SignExtend(
-input signExtIn[15:0]
-output signExtOut[31:0]
-    );
+    input [15:0] signExtIn,
+    output [31:0] signExtOut
+);
+    
+
     
 endmodule
