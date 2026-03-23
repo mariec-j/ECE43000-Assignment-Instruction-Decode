@@ -4,7 +4,7 @@ module SignExtend(
     input [15:0] signExtIn,
     output [31:0] signExtOut
 );
-    
-
+  
+    assign signExtOut = {16'h0,signExtIn};
     
 endmodule
