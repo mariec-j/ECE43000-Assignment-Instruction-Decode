@@ -2,7 +2,7 @@
 
 module InstructionDecode(
     input clk, rst,
-    input [31:0] IF_ID_Latch_Instruction,
+    input [31:0] IFID_instruction,
     
     output [1:0] InstructionDecode_WB,
     output [2:0] InstructionDecode_M,
@@ -17,8 +17,12 @@ module InstructionDecode(
     output [4:0] InstructionDecode_Instr_1511
 );
 
+wire [1:0] control_WB, control_ALUOp;
+wire [2:0] control_M;
+wire ALUSrc, RegDst;
+
 Control c0(
-    input [5:0] controlInput, //opcode
+    .controlInput(IFID_instruction[31:26]), //opcode
     output reg [1:0] control_WB, control_ALUOp,
     output reg [2:0] control_M,
     output reg ALUSrc, RegDst
@@ -32,7 +36,9 @@ SignExtend se0(
 RegisterFile rf0(
     input [4:0] readReg1, readReg2, writeReg,
     input [31:0] writeData,
-    input RegWrite, clk, rst,
+    input RegWrite, 
+    .clk(clk), 
+    .rst(rst),
     
     output reg [31:0] RegFile_readData1, RegFile_readData2
 );
@@ -52,8 +58,8 @@ input [31:0] ReadData2,
 input [31:0] SignExtend,
 input [4:0] Instr_2016,
 input [4:0] Instr_1511,
-input clk,
-input rst,
+.clk(clk),
+.rst(rst),
 
 //Output:
 output reg [1:0] IDEX_Latch_WB,
