@@ -14,4 +14,4 @@ Complete the Instruction Decode (ID) Stage of the MIPS Pipeline. Refer to the De
 - ReadMe
 - Timing Diagrams Screenshots
 
-![Image]("")
+![Image]("TestBenching/Screenshot 2026-03-23 174106.png")
