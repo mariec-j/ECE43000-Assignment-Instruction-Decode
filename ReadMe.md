@@ -14,4 +14,5 @@ Complete the Instruction Decode (ID) Stage of the MIPS Pipeline. Refer to the De
 - ReadMe
 - Timing Diagrams Screenshots
 
-![Image]("TestBenching/Screenshot 2026-03-23 174106.png")
+**Timing Diagram Screenshot**
+![Image](https://github.com/mariec-j/ECE43000-Assignment-Instruction-Decode/blob/main/TestBenching/Screenshot%202026-03-23%20174106.png)
