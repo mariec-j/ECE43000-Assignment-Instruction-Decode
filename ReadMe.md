@@ -13,3 +13,5 @@ Complete the Instruction Decode (ID) Stage of the MIPS Pipeline. Refer to the De
 - Github Link with code
 - ReadMe
 - Timing Diagrams Screenshots
+
+![Image]("")
