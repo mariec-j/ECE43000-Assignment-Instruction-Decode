@@ -1,7 +1,7 @@
 # Assignment: Instruction Decoder
 
 ### Students:
-- Alexandra Nuevelle
+- Alexandra Nevellle
 - Marie Jardiniano
 
 ## Assignment Details
