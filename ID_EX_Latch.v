@@ -33,8 +33,8 @@ output reg [4:0] IDEX_Latch_Instr_1511
 );
 
 
-always @(posedge clk or posedge rst)begin
-    if(rst)begin
+always @(posedge clk or negedge rst)begin
+    if(!rst)begin
         IDEX_Latch_WB <= 2'b0;
         IDEX_Latch_M <= 3'b0;
         IDEX_Latch_ALUOp <= 2'b0;
@@ -48,7 +48,7 @@ always @(posedge clk or posedge rst)begin
         IDEX_Latch_Instr_1511 <= 5'b0;
     end
 
-    if(clk)begin
+    else begin
         IDEX_Latch_WB <= WB;
         IDEX_Latch_M <= M;
         IDEX_Latch_ALUOp <= ALUOp;
